@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> JQUERY ASSIGNMENT</title>
+	<script src="C:\Users\prashant\Downloads\bootstrap-3.3.7-dist\bootstrap-3.3.7-dist\jquery-3.1.1.min.js"></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="C:\Users\prashant\Downloads\bootstrap-3.3.7-dist\bootstrap-3.3.7-dist\css\bootstrap.min.css">
+<script src="C:\Users\prashant\Downloads\bootstrap-3.3.7-dist\bootstrap-3.3.7-dist\js\bootstrap.min.js">
+</script>
+
+<!-- Script For Fading And Toggle Effects with CallBacks-->
+
+<script>
+$(document).ready(function(){
+    $("#button2").click(function(){
+        $("#div2").fadeToggle(3500,function(){
+           $("#div2").css("background-color","green");
+	    });
+    });
+     $("#flip").click(function(){
+        $("#panel").slideToggle("1500");
+    });
+});
+
+</script>
+
+<!-- Script For Animation-->
+
+<script> 
+$(document).ready(function(){
+    $("#button1").click(function(){
+        var div = $("#animator");
+        div.animate({ left: '900px',opacity: '0.8'},"slow");      
+        div.animate({height: '200px', opacity: '0.4'}, "slow");
+        div.animate({width: '250px', opacity: '0.8'}, "slow");
+        div.animate({height: '100px', opacity: '0.4'}, "slow");
+        div.animate({width: '100px', opacity: '0.8'}, "slow");
+    	div.animate({ left: '10px',opacity: '0.8'},"slow");      
+        div.animate({width: '250px',height:'30px', opacity: '1.0'}, "slow");
+    });
+});
+
+</script> 
+
+<!-- Script for Event Handling-->
+
+<script >
+	$(document).ready(function(){
+		$("#button2").on({
+			mouseenter: function(){
+				$(this).css("background-color","red");
+			},
+			mouseleave: function(){
+				$(this).css("background-color","blue");
+			}
+			});
+
+		$("#button1").on({
+			mouseenter: function(){
+				$(this).css("background-color","red");
+			},
+			mouseleave: function(){
+				$(this).css("background-color","blue");
+			}
+			});
+
+			$("#button3").on({
+			click: function(){
+				$("#p1").css("color", "red")
+				  .slideUp(3000)
+  					.slideDown(3000)
+  						.fadeToggle(3000);
+  				},
+			mouseleave: function(){
+				$(this).css("background-color","blue");
+			},
+			mouseenter: function(){
+				$(this).css("background-color","orange");
+			}
+		});	
+	});
+
+</script>
+
+<!-- Script for Chaining-->
+
+<script >
+$(document).ready(function(){
+$("#p1").css("color", "red")
+  .slideUp(3000)
+  .slideDown(3000);
+});
+
+</script>
+
+<!-- Script for DOM Manipulation-->
+
+<script>
+$(document).ready(function(){
+    $("#button4").click(function(){
+        alert("Welcome : " + $("#email").val());
+    });
+});
+
+</script>
+
+
+<!-- Style For Flipping Pannel Element-->
+
+<style> 
+#panel, #flip {
+    text-align: center;
+    background-color: metallic;
+    border: solid 1px blue;
+}
+
+</style>
+
+
+</head>
+<body>
+
+<!-- Navigation Bar -->
+
+<nav class="navbar navbar-inverse" style="background-color: indigo">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+                <a class="navbar-brand" href="#" style="color:White">Space Invasion</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li ><a href="home.html">Home</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Know More <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="aboutUs.html" target="_parent">About Us</a></li>
+              <li><a href="documentation.html" target="_parent">Documentation</a></li>
+              <li><a href="sites.html" target="_parent">Sites</a></li>
+            </ul>
+          </li>
+          <li><a href="cotactus.html">Contact Us</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#SignUp" data-toggle="collapse" data-parent="#accordion">
+            <span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div id="div1" class="container" style="background-color: indigo; color: white;">
+<h2> Orbital Exposure </h2>
+</div>
+<br>
+<div id="div2" class="container" style="background-color:blue;">
+
+<img src="space1.jpg" style="width:220px; height:200px">
+
+<img src="space2.jpg" style="width:220px; height:200px">
+
+<img src="space3.jpg" style="width:220px; height:200px">
+
+<img src="space4.jpg" style="width:220px; height:200px">
+
+<img src="space5.jpg" style="width:242px; height:200px">
+
+</div>
+<br>
+
+<div id="div3" class="container">
+  <button type="button" id="button2" class="btn btn-info btn-block active">Click to see Images Fade-In and Out....</button>
+</div>
+<br><br>
+
+<div id="flip" class="container"><b>Click to Hide and Show Images....</b></div>
+
+<div id="panel" class="container" style="background-color: blue">
+	
+<img src="space1.jpg" style="width:220px; height:200px">
+
+<img src="space2.jpg" style="width:220px; height:200px">
+
+<img src="space3.jpg" style="width:220px; height:200px">
+
+<img src="space4.jpg" style="width:220px; height:200px">
+
+<img src="space5.jpg" style="width:220px; height:200px">
+
+</div>
+<br>
+
+<div class="container" id="motion">
+<div id="animator" style= " color:orange ; position:relative;">
+<p>
+Well This Is an Animation Block.....
+</p>
+</div>
+<button id="button1" class="btn btn-success btn-block active">Start Animation</button>
+
+</div>
+<br><br>
+
+
+<div class="container" id="chainingdiv">
+<p id="p1">
+This block shows Chaining of events using Jquery.....
+This Text will fade in 3 seconds.....
+</p>
+
+<button id="button3" class="btn btn-success btn-block active">Start Chaining</button>
+
+</div>
+<br><br>
+<div id="formdiv" class="container">
+<h3 style="border: double; border-color: blue" align="center"><b>LOGIN</b></h3>
+    <form class="form-horizontal" style="border: double;border-color: blue;">
+     <br>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="email">Email:</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" id="email" placeholder="Enter Email">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="pwd">Password:</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="pwd" placeholder="Enter Password">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <div class="checkbox">
+            <label><input type="checkbox"> Remember me</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="button" id="button4" class="btn btn-primary">Login</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <br>
+
+<div id="footerdiv" class="container">
+<footer  color="black"><b><tt>&#169 Knoldus LLP Ltd. </tt></b></footer>
+</div>
+
+</body>
+</html>
