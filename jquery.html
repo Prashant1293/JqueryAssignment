@@ -117,6 +117,16 @@ $(document).ready(function(){
 
 </style>
 
+<!--  DOM Manipulation Adding a Dyanmic Image -->
+
+<script type = "text/javascript" language = "javascript">
+         $(document).ready(function() {
+            $("#divDom").click(function () {
+               $(this).after('<div class="container" style="color:green">Hello.....'+$("#email").val()+'</div>');
+            });
+         });
+</script>
+		
 
 </head>
 <body>
@@ -250,6 +260,13 @@ This Text will fade in 3 seconds.....
     </form>
   </div>
   <br>
+
+  		
+<div id="divDom" class = "container" style = "background-color:indigo; color: white; ">
+      Click Here.....
+</div>
+      	
+
 
 <div id="footerdiv" class="container">
 <footer  color="black"><b><tt>&#169 Knoldus LLP Ltd. </tt></b></footer>
